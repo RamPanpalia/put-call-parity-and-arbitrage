@@ -60,7 +60,7 @@ function check_arbitrage(){
         document.querySelector('.case-1 .line-2').innerHTML="Use "+ (S0+p-c)*Math.pow(Math.E,r*t/1200) +" to repay loan"
         document.querySelector('.case-1 .line-3').innerHTML="Profit: "+ (K - (S0+p-c)*Math.pow(Math.E,r*t/1200) +D*Math.pow(Math.E,r*(t-dT)/1200) )
         //case-2
-        document.querySelector('.case-2 .line-1').innerHTML="Excercise put option: Sell stock for "+ K
+        document.querySelector('.case-2 .line-1').innerHTML="Exercise put option: Sell stock for "+ K
         document.querySelector('.case-2 .line-2').innerHTML="Use "+ (S0+p-c)*Math.pow(Math.E,r*t/1200) +" to repay loan"
         document.querySelector('.case-2 .line-3').innerHTML="Profit: "+ (K - (S0+p-c)*Math.pow(Math.E,r*t/1200) +D*Math.pow(Math.E,r*(t-dT)/1200) )
     }
