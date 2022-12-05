@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Put Call Parity and Arbitrage</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<body>
+    <div class="inputs">
+        <div class="head">Arbitrage check European Options</div>
+        <div class="input-group">
+            <span class="input-group-text">Stock Price (S<sub>0</sub>)</span>
+            <input type="number" aria-label="stock-price" class="form-control S0" value="31" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Strike Price (K)</span>
+            <input type="number" aria-label="strike-price" class="form-control strike-price" value="30" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Time Period (in months.)(T)</span>
+            <input type="number" aria-label="time-period" class="form-control time-period" value="3" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Call Option Price (c)</span>
+            <input type="number" aria-label="c" class="form-control call-option-price" value="3" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Put Option Price (p)</span>
+            <input type="number" aria-label="p" class="form-control put-option-price" value="2.25" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Risk Free interest Rate (in %) (r)</span>
+            <input type="number" aria-label="r" class="form-control rate" value="10" required>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Dividend (D)</span>
+            <input type="number" aria-label="dividend" value="0" class="form-control dividend" required>
+            <span class="input-group-text">Time period after which we get the dividend</span>
+            <input type="number" aria-label="d-time-period" value="0" class="form-control dividend-t" required>
+        </div>
+        <button class="btn btn-primary" onclick="check_arbitrage()">Check Arbitrage</button>
+    </div>
+
+    <div class="answer">
+        <div class="ans-line"><b>Answer: </b></div>
+        <div class="ans-line">
+            <span class="action call-action">Buy</span>
+            call
+            <span class="call-value"></span>
+        </div>
+        <div class="ans-line">
+            <span class="action put-action">Buy</span>
+            put
+            <span class="put-value"></span>
+        </div>
+        <div class="ans-line">
+            <span class="action stock-action">Buy</span>
+            stock
+            <span class="stock-value"></span>
+        </div>
+        <div class="ans-line">
+            <span class="action borrow-invest-action"></span> 
+            <span class="b-i-value"></span>
+        </div>
+        <div class="ans-line dividend-action"></div>
+        <br>
+        <div class="ans-line">At maturity after <span class="tem"></span> months-</div>
+        <br>
+        <div class="ans-line">If S<sub>t</sub> > K </div>
+        <div class="ans-line case-1">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+        <br>
+        <div class="ans-line">If S<sub>t</sub> < K </div>
+        <div class="ans-line case-2">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+        <div class="abc"></div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</html>

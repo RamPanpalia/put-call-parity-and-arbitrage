@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: no-repeat url(//s.ytimg.com/yt/imgbin/www-refreshbg-vflC3wnbM.png) 0 0 !important;
+    background-color: #EBEBEB !important;
+    background-repeat: repeat !important;
+}
+.head{
+    font-size: 30px;
+    font-weight: 700;
+}
+.inputs{
+    margin: 40px 10vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.input-group{
+    /* box-shadow: 2px 2px 5px gray; */
+    border: 1px solid black;
+    margin: 20px 0;
+}
+.inputs button{
+    width: fit-content;
+    margin: auto;
+}
+.answer{
+    margin: 20px 8vw;
+    padding: 2vh 2vw;
+    background-color: bisque;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 5px;
+}
+.action{
+    color: green;
+    font-weight: 600;
+}
