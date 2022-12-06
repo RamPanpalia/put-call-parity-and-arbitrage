@@ -34,9 +34,9 @@ function check_arbitrage(){
         document.querySelector('.case-1 .line-2').innerHTML="Exercise call to buy stock for "+K
         document.querySelector('.case-1 .line-3').innerHTML="Profit: "+ ((S0+p-c-D*Math.pow(Math.E,-1*r*dT/1200))*Math.pow(Math.E,r*t/1200) - K)
         //case-2
-        document.querySelector('.case-2 .line-1').innerHTML="Recieve "+ (S0+p-c)*Math.pow(Math.E,r*t/1200) +" from investment"
+        document.querySelector('.case-2 .line-1').innerHTML="Recieve "+ (S0+p-c-D*Math.pow(Math.E,-1*r*dT/1200))*Math.pow(Math.E,r*t/1200) +" from investment"
         document.querySelector('.case-2 .line-2').innerHTML="Put Exercised: buy stock for "+K
-        document.querySelector('.case-2 .line-3').innerHTML="Profit: "+ ((S0+p-c)*Math.pow(Math.E,r*t/1200) - K)
+        document.querySelector('.case-2 .line-3').innerHTML="Profit: "+ ((S0+p-c-D*Math.pow(Math.E,-1*r*dT/1200))*Math.pow(Math.E,r*t/1200) - K)
     }
     else{
         // alert('sell call,buy put')
