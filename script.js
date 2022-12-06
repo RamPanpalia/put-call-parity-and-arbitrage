@@ -65,5 +65,5 @@ function check_arbitrage(){
         document.querySelector('.case-2 .line-3').innerHTML="Profit: "+ (K - (S0+p-c)*Math.pow(Math.E,r*t/1200) +D*Math.pow(Math.E,r*(t-dT)/1200) )
     }
 
-    document.querySelector('.abc').innerHTML=portA+" "+portB
+    document.querySelector('.abc').innerHTML="PortA value: "+portA+" PortB value: "+portB
 }
